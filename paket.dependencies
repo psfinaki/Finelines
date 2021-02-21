@@ -1,0 +1,7 @@
+source https://api.nuget.org/v3/index.json
+
+nuget FSharp.Core
+nuget xUnit
+nuget Microsoft.NET.Test.Sdk
+nuget xunit.runner.visualstudio
+nuget Unquote

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="paket.references" />
+    <Compile Include="AssemblyInfo.fs" />
+    <Compile Include="Parameter.fs" />
+    <Compile Include="YamlCreationHelper.fs" />
+    <Compile Include="Format.fs" />
+    <Compile Include="Id.fs" />
+    <Compile Include="Tasks\Task.fs" />
+    <Compile Include="Tasks\YamlTask.fs" />
+    <Compile Include="Tasks\IYamlTask.fs" />
+    <Compile Include="Tasks\ITaskBuilder.fs" />
+    <Compile Include="Tasks\ITaskBuilderExtensions.fs" />
+    <Compile Include="Tasks\DeploymentSlot.fs" />
+    <Compile Include="Tasks\AzureAppServiceManage\AzureAppServiceManageTask.fs" />
+    <Compile Include="Tasks\AzureAppServiceManage\AzureAppServiceManageStartTask.fs" />
+    <Compile Include="Tasks\AzureAppServiceManage\AzureAppServiceManageStopTask.fs" />
+    <Compile Include="Tasks\AzureAppServiceManage\AzureAppServiceManageSwapSlotsTask.fs" />
+    <Compile Include="Tasks\AzureCli\AzureCliTask.fs" />
+    <Compile Include="Tasks\AzureCli\AzureCliBashTask.fs" />
+    <Compile Include="Tasks\AzureCli\AzureCliBatchTask.fs" />
+    <Compile Include="Tasks\AzureCli\AzureCliPowerShellTask.fs" />
+    <Compile Include="Tasks\AzureWebApp\AzureWebAppTask.fs" />
+    <Compile Include="Tasks\AzureWebApp\AzureWebAppLinuxTask.fs" />
+    <Compile Include="Tasks\AzureWebApp\AzureWebAppWindowsTask.fs" />
+    <Compile Include="Tasks\DotNetCoreCli\DotNetCoreCliTask.fs" />
+    <Compile Include="Tasks\DotNetCoreCli\DotNetCoreCliRunTask.fs" />
+    <Compile Include="Tasks\DotNetCoreCli\DotNetCoreCliBuildTask.fs" />
+    <Compile Include="Tasks\DotNetCoreCli\DotNetCoreCliCustomTask.fs" />
+    <Compile Include="Tasks\DotNetCoreCli\DotNetCoreCliTestTask.fs" />
+    <Compile Include="Tasks\DotNetCoreCli\DotNetCoreCliPublishTask.fs" />
+    <Compile Include="Tasks\ArchiveFiles\ArchiveFilesTask.fs" />
+    <Compile Include="Tasks\ArchiveFiles\ArchiveFilesZipTask.fs" />
+    <Compile Include="Tasks\ArchiveFiles\ArchiveFiles7zTask.fs" />
+    <Compile Include="Tasks\ArchiveFiles\ArchiveFilesTarTask.fs" />
+    <Compile Include="Tasks\ArchiveFiles\ArchiveFilesWimTask.fs" />
+    <Compile Include="Tasks\CopyFilesTask.fs" />
+    <Compile Include="Pools\YamlPool.fs" />
+    <Compile Include="Pools\IYamlPool.fs" />
+    <Compile Include="Pools\PrivatePool.fs" />
+    <Compile Include="Pools\HostedPool.fs" />
+    <Compile Include="Jobs\YamlJob.fs" />
+    <Compile Include="Jobs\IYamlJob.fs" />
+    <Compile Include="Jobs\Job.fs" />
+    <Compile Include="Jobs\Deployment.fs" />
+    <Compile Include="Stages\YamlStage.fs" />
+    <Compile Include="Stages\IYamlStage.fs" />
+    <Compile Include="Stages\Stage.fs" />
+    <Compile Include="Pipelines\YamlPipeline.fs" />
+    <Compile Include="Pipelines\Pipeline.fs" />
+  </ItemGroup>
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
+</Project>

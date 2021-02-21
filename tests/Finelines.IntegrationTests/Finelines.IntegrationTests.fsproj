@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="paket.references" />
+    <Compile Include="Common.fs" />
+    <Compile Include="AzureAppServiceManage\AzureAppServiceManageSwapSlotsTaskTests.fs" />
+    <Compile Include="AzureAppServiceManage\AzureAppServiceManageStopTaskTests.fs" />
+    <Compile Include="AzureAppServiceManage\AzureAppServiceManageStartTaskTests.fs" />
+    <Compile Include="AzureWebApp\AzureWebAppLinuxTaskTests.fs" />
+    <Compile Include="AzureWebApp\AzureWebAppWindowsTaskTests.fs" />
+    <Compile Include="ArchiveFiles\ArchiveFiles7zTaskTests.fs" />
+    <Compile Include="ArchiveFiles\ArchiveFilesTarTaskTests.fs" />
+    <Compile Include="ArchiveFiles\ArchiveFilesWimTaskTests.fs" />
+    <Compile Include="ArchiveFiles\ArchiveFilesZipTaskTests.fs" />
+    <Compile Include="DotNetCoreCli\DotNetCoreCliPublishTaskTests.fs" />
+    <Compile Include="DotNetCoreCli\DotNetCoreCliCustomTaskTests.fs" />
+    <Compile Include="DotNetCoreCli\DotNetCoreCliRunTaskTests.fs" />
+    <Compile Include="DotNetCoreCli\DotNetCoreCliBuildTaskTests.fs" />
+    <Compile Include="DotNetCoreCli\DotNetCoreCliTestTaskTests.fs" />
+    <Compile Include="AzureCli\AzureCliPowerShellTaskTests.fs" />
+    <Compile Include="AzureCli\AzureCliBatchTaskTests.fs" />
+    <Compile Include="AzureCli\AzureCliBashTaskTests.fs" />
+    <Compile Include="CopyFilesTaskTests.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Finelines\Finelines.fsproj" />
+  </ItemGroup>
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
+</Project>

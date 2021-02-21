@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include=".editorconfig" />
+    <None Include="paket.references" />
+    <Compile Include="YamlCreationHelperTests.fs" />
+    <Compile Include="IdTests.fs" />
+    <Compile Include="FormatTests.fs" />
+    <Compile Include="Tasks\YamlTaskTests.fs" />
+    <Compile Include="Tasks\DeploymentSlotTests.fs" />
+    <Compile Include="Tasks\AzureAppServiceManage\AzureAppServiceManageTaskTests.fs" />
+    <Compile Include="Tasks\AzureAppServiceManage\AzureAppServiceManageStartTaskTests.fs" />
+    <Compile Include="Tasks\AzureAppServiceManage\AzureAppServiceManageStopTaskTests.fs" />
+    <Compile Include="Tasks\AzureAppServiceManage\AzureAppServiceManageSwapSlotsTaskTests.fs" />
+    <Compile Include="Tasks\AzureCli\AzureCliTaskTests.fs" />
+    <Compile Include="Tasks\AzureCli\AzureCliBashTaskTests.fs" />
+    <Compile Include="Tasks\AzureCli\AzureCliBatchTaskTests.fs" />
+    <Compile Include="Tasks\AzureCli\AzureCliPowerShellTaskTests.fs" />
+    <Compile Include="Tasks\AzureWebApp\AzureWebAppTaskTests.fs" />
+    <Compile Include="Tasks\AzureWebApp\AzureWebAppLinuxTaskTests.fs" />
+    <Compile Include="Tasks\AzureWebApp\AzureWebAppWindowsTaskTests.fs" />
+    <Compile Include="Tasks\DotNetCoreCli\DotNetCoreCliTaskTests.fs" />
+    <Compile Include="Tasks\DotNetCoreCli\DotNetCoreCliRunTaskTests.fs" />
+    <Compile Include="Tasks\DotNetCoreCli\DotNetCoreCliCustomTaskTests.fs" />
+    <Compile Include="Tasks\DotNetCoreCli\DotNetCoreCliBuildTaskTests.fs" />
+    <Compile Include="Tasks\DotNetCoreCli\DotNetCoreCliTestTaskTests.fs" />
+    <Compile Include="Tasks\DotNetCoreCli\DotNetCoreCliPublishTaskTests.fs" />
+    <Compile Include="Tasks\ArchiveFiles\ArchiveFilesTaskTests.fs" />
+    <Compile Include="Tasks\ArchiveFiles\ArchiveFiles7zTaskTests.fs" />
+    <Compile Include="Tasks\ArchiveFiles\ArchiveFilesWimTaskTests.fs" />
+    <Compile Include="Tasks\ArchiveFiles\ArchiveFilesZipTaskTests.fs" />
+    <Compile Include="Tasks\ArchiveFiles\ArchiveFilesTarTaskTests.fs" />
+    <Compile Include="Tasks\CopyFilesTaskTests.fs" />
+    <Compile Include="Pools\YamlPoolTests.fs" />
+    <Compile Include="Pools\PrivatePoolTests.fs" />
+    <Compile Include="Pools\HostedPoolTests.fs" />
+    <Compile Include="Jobs\YamlJobTests.fs" />
+    <Compile Include="Jobs\JobTests.fs" />
+    <Compile Include="Jobs\DeploymentTests.fs" />
+    <Compile Include="Stages\StageTests.fs" />
+    <Compile Include="Stages\YamlStageTests.fs" />
+    <Compile Include="Pipelines\YamlPipelineTests.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Finelines\Finelines.fsproj" />
+  </ItemGroup>
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
+</Project>
