@@ -85,11 +85,15 @@ It's much more clear what is required here as compared to [this monster](https:/
 
 ![image](https://user-images.githubusercontent.com/5451366/127999594-c2107f91-14c3-478c-b903-9570ae326f97.png)
 
-
 ## State of the code
 
-The code needs a proper review for things like naming, structure and so on. It's relatively properly covered with unit and integration tests. 
-There is a sample showing things in action (generating YAML from F#).
+The code needs a proper review for things like naming, structure and so on. It's relatively properly covered with unit and integration tests.
+To get started, run:
+```powershell
+dotnet tool restore
+dotnet paket restore
+```
+Then you should be good to go. In the solution you can find a sample showing things in action (generating YAML from F#).
 
 ## Help needed!
 
