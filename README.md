@@ -45,7 +45,7 @@ F# has great type inference which lets people write strongly typed code without 
 ## Inspiration
 
 The concept and implementation are influenced by the "Infrastructure as Code" projects 
-and in particular by [Farmer](https://github.com/CompositionalIT/farmer/) which translates F# to JSON configuration is a similar manner (and for similar reasons).
+and in particular by [Farmer](https://github.com/CompositionalIT/farmer/) which translates F# to ARM templates (JSON configuration) is a similar manner (and for similar reasons).
 
 ## State of the art
 
