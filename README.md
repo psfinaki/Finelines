@@ -87,7 +87,7 @@ It's much more clear what is required here as compared to [this monster](https:/
 
 ## State of the code
 
-The code needs a proper review for things like naming, structure and so on. It's relatively properly covered with unit and integration tests.
+The code needs a proper review for things like naming, structure and so on. It's relatively well covered with unit and integration tests.
 To get started, run:
 ```powershell
 dotnet tool restore
