@@ -29,7 +29,7 @@ let myAwesomePipeline =
 ## Motivation
 
 As continuous integration becomes more complex, the developer world is moving towards the idea of "Pipelines as Code" 
-bringing the benefits of version control, easy rollbacks and so on. YAML pipelines have been gradually replacing old "UI" pipelines for CI and CD.
+bringing the benefits of version control, easy rollbacks and so on. YAML pipelines have been gradually replacing old UI pipelines for CI and CD.
 
 Now the problem with YAML pipelines is that [YAML](https://en.wikipedia.org/wiki/YAML) is not "code". It's not a programming language. It was never meant to be. 
 It's a markup language, or a data serialization language, or whatever, but it was not created for development. 
@@ -72,7 +72,7 @@ azureWebAppWindows {
     appName "Test"
     target "Test"
     addAppSetting "port" "5000"
-    addAppSetting "port" "3000" // throws
+    addAppSetting "port" "3000" // throws: copypaste? another setting meant here?
 }
 ```
 This is a much faster response compared to actually executing the pipeline (or worse, the service).
