@@ -98,4 +98,4 @@ Then you should be good to go. In the solution you can find a sample showing thi
 ## Help needed!
 
 This project is a result of a few months of exciting mornings with computational expressions in F#. Before I continue, I need to understand if this is of some use.
-Feel free to create issues and pull requests or just reach out to me with your feedback.
+Feel free to create issues and pull requests or just reach out to me with your feedback via [Discussions](https://github.com/psfinaki/Finelines/discussions).
