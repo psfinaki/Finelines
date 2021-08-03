@@ -81,9 +81,8 @@ Another idea is to bring back the discoverability of UI pipelines:
 
 ![image](https://user-images.githubusercontent.com/5451366/127999636-68e7b709-2ccb-4120-ba3d-00f7a7e08608.png)
 
-It's much more clear what is required here as compared to [this monster](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/build/dotnet-core-cli?view=azure-devops#yaml-snippet).
+It's much more clear what is required here as compared to [this monster](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/build/dotnet-core-cli?view=azure-devops#yaml-snippet). We can split this into possible cases for the task and then leverage things like IntelliSense to understand what can be specified:
 
-We can split this into possible cases for the task and then leverage things like IntelliSense to understand what can be specified:
 ![image](https://user-images.githubusercontent.com/5451366/127999594-c2107f91-14c3-478c-b903-9570ae326f97.png)
 
 
