@@ -1,5 +1,5 @@
 # Finelines
-Finelines make it possible to write YAML pipelines in F#.
+Write YAML pipelines in F#.
 
 ## Demo
 
