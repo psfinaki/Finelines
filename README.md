@@ -1,5 +1,5 @@
 # Finelines
-YAML pipelines as proper code.
+Finelines make it possible to write YAML pipelines in F#.
 
 ## Demo
 
@@ -45,7 +45,7 @@ F# has great type inference which lets people write strongly typed code without 
 ## Inspiration
 
 The concept and implementation are influenced by the "Infrastructure as Code" projects 
-and in particular by [Farmer](https://github.com/CompositionalIT/farmer/) which translates F# to ARM templates (JSON configuration) is a similar manner (and for similar reasons).
+and in particular by [Farmer](https://github.com/CompositionalIT/farmer/) which translates F# to ARM templates (JSON configuration) is a similar manner and for similar reasons.
 
 ## State of the art
 
@@ -54,7 +54,7 @@ The current code is not supporting the whole [YAML schema](https://docs.microsof
 Here's what's available:
 - Stages
 - Jobs (both regular jobs and deployments)
-- Pools (private and hosted)
+- Pools (private and hosted ones)
 - Tasks (a dozen of some popular ones)
 
 What needs to be done:
@@ -88,6 +88,7 @@ It's much more clear what is required here as compared to [this monster](https:/
 ## State of the code
 
 The code needs a proper review for things like naming, structure and so on. It's relatively well covered with unit and integration tests.
+
 To get started, run:
 ```powershell
 dotnet tool restore
