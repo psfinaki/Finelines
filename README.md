@@ -4,6 +4,36 @@ Write YAML pipelines in F#.
 ## Demo
 
 ```fsharp
+let hostedPool = 
+    hostedPool {
+        vmImage VmImage.Windows2019 
+    }
+
+let buildCode = 
+    dotNetCoreCliBuild {
+        workingDirectory "src"
+    }
+
+let test =
+    dotNetCoreCliTest {
+        workingDirectory "test"
+    }
+
+let publish =
+    dotNetCoreCliPublish {
+        arguments "-c release -o deploy -r win-x64"
+    }    
+    
+let buildTestPublish =
+    job {
+        name "my-awesome-job"
+        addTask buildCode
+        addTask test
+        addTask publish
+    }
+
+...
+
 let build =
     stage {
         name "Build"
