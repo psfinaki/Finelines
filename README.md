@@ -124,7 +124,7 @@ To get started, run:
 dotnet tool restore
 dotnet paket restore
 ```
-Then you should be good to go. In the solution you can find a sample showing things in action (generating YAML from F#).
+Then you should be good to go. In the solution you can find a sample showing things in action (generating YAML from F#). Integration tests will also we helpful.
 
 ## Help needed!
 
