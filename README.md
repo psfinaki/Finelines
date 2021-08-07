@@ -77,9 +77,15 @@ F# has great type inference which lets people write strongly typed code without 
 The concept and implementation are influenced by the "Infrastructure as Code" projects 
 and in particular by [Farmer](https://github.com/CompositionalIT/farmer/) which translates F# to ARM templates (JSON configuration) is a similar manner and for similar reasons.
 
+## Scope
+
+The project was written with Azure DevOps YAML pipelines in mind and therefore deals with the respective [schema](https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema). 
+
+Nonetheless, most probably the whole thing can be rather easily generalized to support other CI/CD systems dealing with YAML. I would welcome this, it's just that I don't have experience with other engines yet.
+
 ## State of the art
 
-The current code is not supporting the whole [YAML schema](https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema) yet. 
+The current code is not supporting the whole schema yet. 
 
 Here's what's available:
 - Stages
