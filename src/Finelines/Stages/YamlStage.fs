@@ -7,6 +7,7 @@ open Finelines.Jobs
 type YamlStage = {
     Stage: string option
     DisplayName: string option
+    Condition: string option
     Jobs: YamlJob list
 }
 
@@ -21,6 +22,10 @@ type YamlStage with
             this.DisplayName
             |> Option.map (fun name -> $"displayName: {format (Text name)}")
 
+        let condition = 
+            this.Condition
+            |> Option.map (fun condition -> $"condition: {format (Text condition)}")
+
         let jobs = 
             this.Jobs
             |> List.map (fun job -> job.AsString())
@@ -31,6 +36,7 @@ type YamlStage with
             [
                 Some title
                 displayName |> Option.map (prepend indent)
+                condition |> Option.map (prepend indent)
                 Some $"{indent}jobs:"
             ]
             |> List.choose id

@@ -11,6 +11,7 @@ let ``Formats yaml stage`` () =
     let yaml = {
         Stage = Some "stage1"
         DisplayName = Some "Awesome stage"
+        Condition = Some "always()"
         Jobs = [
             {
                 Type = JobType.Traditional
@@ -48,6 +49,7 @@ let ``Formats yaml stage`` () =
     let expected = "\
 - stage: stage1
   displayName: Awesome stage
+  condition: 'always()'
   jobs:
   - job:
     steps:
@@ -70,6 +72,7 @@ let ``Formats yaml stage - no name`` () =
     let yaml = {
         Stage = None
         DisplayName = Some "Awesome stage"
+        Condition = None
         Jobs = [
             {
                 Type = JobType.Traditional
@@ -129,6 +132,7 @@ let ``Formats yaml stage - no display name`` () =
     let yaml = {
         Stage = Some "stage1"
         DisplayName = None
+        Condition = None
         Jobs = [
             {
                 Type = JobType.Traditional

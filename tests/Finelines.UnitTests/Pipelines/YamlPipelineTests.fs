@@ -14,6 +14,7 @@ let ``Formats yaml pipeline`` () =
             {
                 Stage = Some "stage1"
                 DisplayName = None
+                Condition = None
                 Jobs = [
                     {
                         Type = JobType.Traditional
@@ -35,6 +36,7 @@ let ``Formats yaml pipeline`` () =
             {
                  Stage = Some "stage2"
                  DisplayName = None
+                 Condition = None
                  Jobs = [
                      {
                          Type = JobType.Traditional
