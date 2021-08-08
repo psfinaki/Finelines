@@ -56,3 +56,11 @@ let ``Formats map - many items`` () =
     let actual = format (Dictionary map)
 
     test <@ actual = expected @>
+
+[<Fact>]
+let ``Formats condition expression`` () =
+    test <@ format (ConditionExpression "text 1") = "text 1" @>
+
+[<Fact>]
+let ``Formats condition expression - special characters`` () =
+    test <@ format (ConditionExpression "always ()") = "always ()" @>

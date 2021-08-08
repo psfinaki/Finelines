@@ -160,6 +160,7 @@ let Demo () =
     let build =
         stage {
             name "Build"
+            condition "always()"
             addJob buildTestPublish
         }
 
