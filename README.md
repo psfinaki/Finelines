@@ -1,3 +1,5 @@
+[![.NET](https://github.com/psfinaki/Finelines/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/psfinaki/Finelines/actions/workflows/dotnet.yml)
+
 # Finelines
 Write YAML pipelines in F#.
 
