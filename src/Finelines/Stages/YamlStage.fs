@@ -13,7 +13,7 @@ type YamlStage = {
 
 type YamlStage with
     member this.AsString() =
-        let title = 
+        let title =
             this.Stage
             |> Option.map (fun stage -> $"- stage: {format (Text stage)}")
             |> Option.defaultValue "- stage:"
@@ -22,11 +22,11 @@ type YamlStage with
             this.DisplayName
             |> Option.map (fun name -> $"displayName: {format (Text name)}")
 
-        let condition = 
+        let condition =
             this.Condition
-            |> Option.map (fun condition -> $"condition: {format (Text condition)}")
+            |> Option.map (fun condition -> $"condition: {format (ConditionExpression condition)}")
 
-        let jobs = 
+        let jobs =
             this.Jobs
             |> List.map (fun job -> job.AsString())
             |> String.concat $"{br}{br}"
